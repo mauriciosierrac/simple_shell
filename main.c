@@ -9,12 +9,11 @@
 
 int main()
 {
-	char *c = "$ ", *str = NULL, delim[2] = "\n", *token;
+	char *c = "$ ", *str = NULL;
 	int command;
 	size_t n = 0;
 	struct stat st;
-	char *array[] = {NULL, NULL, "/.", NULL};
-
+	char *array[4];
 
 	while (1)
 	{
@@ -22,16 +21,17 @@ int main()
 	
 		if ((command = getline(&str, &n, stdin) != -1))
 		{
-			token = strtok(str,delim);
-			if(stat(token, &st) == 0)
+			write_buf(array, str);
+
+			if(stat(array[0], &st) == 0)
 			{
-				array [0] = token;
 				_execve(array);
+				clean_buf(array);
 			}
 			else
 				perror("Error: ");
 		}
 	}
-
-return(0);
+	free(str);
+	return(0);
 }

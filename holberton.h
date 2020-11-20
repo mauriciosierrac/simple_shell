@@ -27,5 +27,7 @@ extern char **environ;
 /* PROTOTYPES */
 
 void _execve(char **ag);
+void write_buf(char**, char*);
+void clean_buf(char**);
 
 #endif /*HOLBERTON*/

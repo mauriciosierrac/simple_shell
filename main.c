@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 /**
 *
 *
@@ -8,31 +7,31 @@
 *
 */
 
-int main(){
+int main()
+{
+	char *c = "$ ", *str = NULL;
+	int command;
+	size_t n = 0;
+	struct stat st;
+	char *array[] = {NULL, NULL, "/.", NULL};
 
-char *c = "$ ";
-int status, command;
-char *str= NULL;
-size_t n = 0;
-struct stat st;
-
-	while(1)
+	while (1)
 	{
-	return ( write ( 1 , & c, 1 ));
+		write (STDOUT_FILENO, c, 2);
 	
-	if((command = getline(&str, &n, stdin) != -1)
-		{	
+		if ((command = getline(&str, &n, stdin) != -1))
+		{
+			str[command - 1] = '\0';
+
 			if(stat(str, &st) == 0)
-			{	
-			execve; 
+			{
+				array[0] = str;
+				_execve(array);
 			}
 			else
-			{
-			perror("Error: ");
-			}
+				perror("Error: ");
 		}
 	}
 
 return(0);
 }
-

@@ -1,15 +1,41 @@
 #include "holberton.h"
 
+/**
+ * count_delim = count delimiters in str
+ * @str: string
+ * @delim: delimiters
+ * Return: Number of delimiters
+ */
+
+int count_delim(char *str, char*delim)
+{
+	int i, k, con = 0;
+
+	for (i = 0; str[i]; i++)
+	{
+		for(k = 0; delim[k]; k++)
+		{
+			if (delim[k] == str[i])
+				con++;
+		}
+	}
+	return (con);
+}
+
+/**
+ * write_buf = create a buffer (double pointer)
+ * @str: string
+ * @delim: delimiters
+ * Return: Buffer
+ */
+
 char **write_buf(char *str, char *delim)
 {
 	char *token;
 	char **buf;
-	int i, con = 0, j = 0;
+	int con, j = 0;
 
-	for (i = 0; str[i]; i++)
-		if(str[i] == ' ' || str[i] == '\n')
-			con++;
-
+	con = count_delim(str, delim);
 	buf = malloc(sizeof(char *) * (con + 1));
 	token = strtok(str, delim);
 

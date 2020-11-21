@@ -9,7 +9,7 @@
 
 int main()
 {
-	char *c = "$ ", *str = NULL, *chk = NULL;
+	char *c = "$ ", *str = NULL;
 	int command, i;
 	size_t n = 0;
 	struct stat st;
@@ -24,22 +24,17 @@ int main()
 			if (str[0] == '1')
 				break;
 
-			array = write_buf(str, " \n");
-			chk = chk_path(array[0]);
+			array = chk_path(str);
 
-			if (chk)
+			if (stat(array[0], &st) == 0)
 			{
-				array[0] = chk;
 				_execve(array);
-				free(chk);
+				for (i = 0; array[i]; i++)
+					free(array[i]);
+				free(array);
 			}
-			else if (stat(array[0], &st) == 0)
-				_execve(array);
 			else
 				perror("ErrorMain: ");
-			for (i = 0; array[i]; i++)
-				free(array[i]);
-			free(array);
 		}
 	}
 	free(str);

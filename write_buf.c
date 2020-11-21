@@ -1,17 +1,24 @@
 #include "holberton.h"
 
-void write_buf(char **buf, char *str)
+char **write_buf(char *str, char *delim)
 {
 	char *token;
-	char delim[] = " \n";
-	int i = 0;
+	char **buf;
+	int i, con = 0, j = 0;
 
+	for (i = 0; str[i]; i++)
+		if(str[i] == ' ' || str[i] == '\n')
+			con++;
+
+	buf = malloc(sizeof(char *) * (con + 1));
 	token = strtok(str, delim);
 
 	while (token)
 	{
-		buf[i] = token;
+		buf[j] = _strdup(token);
 		token = strtok(NULL, delim);
-		i++;
+		j++;
 	}
+	buf[j] = NULL;
+	return (buf);
 }

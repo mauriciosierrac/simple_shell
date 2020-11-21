@@ -27,7 +27,10 @@ extern char **environ;
 /* PROTOTYPES */
 
 void _execve(char **ag);
-void write_buf(char**, char*);
-void clean_buf(char**);
+char **write_buf(char *, char *);
+char *chk_path(char *);
+int my_strcmp(char *env, const char *str, int len);
+char *_getenv(char *);
+char *_strdup(char *str);
 
 #endif /*HOLBERTON*/

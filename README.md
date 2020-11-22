@@ -31,6 +31,6 @@ What you should learn from this project:
 ---
 
 ## Authors
-* **Gonzalo Andres Tarazona** - [gotarazo](https://github.com/gotarazo)
+* **Soren Acevedo** - [gotarazo](https://github.com/SorenAcevedo)
 * **Mauricio Sierra Cifuentes** - [mauriciosierrac](https://github.com/\mauriciosierrac)
 ~    

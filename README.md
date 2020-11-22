@@ -16,16 +16,21 @@ What you should learn from this project:
 
 ---
 
-### [0.  I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life](./_printf.c)
-* Write a function that produces output according to a format.
+### [0.  README, man, AUTHORS](./README.md)
+* Write a README
+* Write a man for your shell.
+* You should have an AUTHORS file at the root of your repository.
 
 
-### [1. Education is when you read the fine print. Experience is what you get if you don't ](./_printf.c)
-* Handle the following conversion specifiers:
+### [1. Betty Would be proud ]
+* Write a beautiful code that passes the Betty checks.
 
 
-### [2. Just because it's in print doesn't mean it's the gospel](./man_3_printf)
-* Create a man page for your function
+### [2. Simple Shell 0.1](./main.c)
+* Write a UNIX command line interpreter.
+
+
+
 
 
 ---

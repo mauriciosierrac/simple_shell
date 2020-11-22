@@ -16,27 +16,28 @@ int main()
 	while (1)
 	{
 		write (STDOUT_FILENO, c, 2);
+		command = getline(&str, &n, stdin);
 
-		if ((command = getline(&str, &n, stdin) != -1))
+		if (command == EOF)
+			break;
+
+		if (command != -1)
 		{
-			if (str[0] == '1')
-				break;
-
 			if (chk_builtin(str) == 0)
 			{
 				array = chk_path(str);
 
 				if (stat(array[0], &st) == 0)
-				{
 					_execve(array);
-					for (i = 0; array[i]; i++)
-						free(array[i]);
-					free(array);
-				}
 				else
 					perror("ErrorMain: ");
+				for (i = 0; array[i]; i++)
+					free(array[i]);
+				free(array);
 			}
 		}
+		else
+			perror("Error");
 	}
 	free(str);
 	return(0);

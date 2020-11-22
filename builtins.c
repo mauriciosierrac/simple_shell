@@ -29,11 +29,9 @@ int _printenv(char *str)
 	{
 		for (j = 0; environ[i][j]; j++)
 		{
-			if (environ[i][j] == ':')
-				_putchar(10);
-			else
 				_putchar(environ[i][j]);
 		}
+		_putchar(10);
 	}
 	return (1);
 }

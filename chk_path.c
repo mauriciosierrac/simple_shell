@@ -38,5 +38,5 @@ char **chk_path(char *str)
 		free(pbuf);
 	}
 	free(pget);
-	return (NULL);
+	return (array);
 }

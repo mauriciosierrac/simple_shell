@@ -1,39 +1,35 @@
 #include "holberton.h"
 
-char *chk_path(char *str)
+char **chk_path(char *str)
 {
-	int l1, l2, i;
-	char *envpath = "PATH";
-	char *concat = NULL, *pget = NULL;
-	char **pbuf;
+	int i;
+	char *envpath = "PATH", *concat, *pget;
+	char **pbuf, **array;
 	struct stat st;
 
+	array = write_buf(str, " \n");
+	
+	if (stat(array[0], &st) == 0)
+		return (array);
+
 	pget = _strdup(_getenv(envpath));
+
 	if (pget)
 	{
-		pbuf = write_buf(pget, ":");
+		pbuf = write_buf(pget, ":\n");
 		for (i = 0; pbuf[i]; i++)
 		{
-			l1 = 0, l2 = 0;
-			concat = malloc(sizeof(char) * (strlen(pbuf[i]) + strlen(str)));
-			while ((pbuf[i])[l1])
-			{
-				concat[l1] = (pbuf[i])[l1];
-				l1++;
-			}
-			concat[l1++] = '/';
-			while (str[l2])
-			{
-			concat[l2 + l1] = str[l2];
-				l2++;
-			}
+			concat = str_concat(pbuf[i], str);
+
 			if (stat(concat, &st) == 0)
 			{
 				for (i = 0; pbuf[i]; i++)
 					free(pbuf[i]);
 				free(pbuf);
 				free(pget);
-				return (concat);
+				free(array[0]);
+				array[0] = concat;
+				return (array);
 			}
 			free(concat);
 		}

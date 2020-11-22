@@ -28,9 +28,12 @@ extern char **environ;
 
 void _execve(char **ag);
 char **write_buf(char *, char *);
-char *chk_path(char *);
+char **chk_path(char *);
 int my_strcmp(char *env, const char *str, int len);
 char *_getenv(char *);
 char *_strdup(char *str);
+char *str_concat(char *s1, char *s2);
+int _strlen(char *s);
+int count_delim(char *str, char*delim);
 
 #endif /*HOLBERTON*/

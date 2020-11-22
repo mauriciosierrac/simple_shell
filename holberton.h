@@ -16,11 +16,11 @@
  * @next: apunta al siguiente nodo
  */
 
-typedef  struct list_s
+typedef struct builtin
 {
-	char * str;
-	struct list_s * siguiente;
-} list_t ;
+	char *str;
+	int (*fun)(char *);
+} builtin;
 
 extern char **environ;
 
@@ -33,7 +33,10 @@ int my_strcmp(char *env, const char *str, int len);
 char *_getenv(char *);
 char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
+int chk_builtin(char *);
 int _strlen(char *s);
 int count_delim(char *str, char*delim);
-
+int our_exit(char *);
+int _printenv(char *);
+int _putchar(char c);
 #endif /*HOLBERTON*/

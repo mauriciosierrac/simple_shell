@@ -7,9 +7,9 @@
  * Return: Number of delimiters
  */
 
-int count_delim(char *str, char*delim)
+int count_delim(char *str, char *delim)
 {
-	int i, k, con = 0;
+	int i, k, con = 1;
 
 	for (i = 0; str[i]; i++)
 	{

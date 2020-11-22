@@ -3,8 +3,6 @@
 /**
 *
 *
-*
-*
 */
 
 int main()
@@ -24,17 +22,20 @@ int main()
 			if (str[0] == '1')
 				break;
 
-			array = chk_path(str);
-
-			if (stat(array[0], &st) == 0)
+			if (chk_builtin(str) == 0)
 			{
-				_execve(array);
-				for (i = 0; array[i]; i++)
-					free(array[i]);
-				free(array);
+				array = chk_path(str);
+
+				if (stat(array[0], &st) == 0)
+				{
+					_execve(array);
+					for (i = 0; array[i]; i++)
+						free(array[i]);
+					free(array);
+				}
+				else
+					perror("ErrorMain: ");
 			}
-			else
-				perror("ErrorMain: ");
 		}
 	}
 	free(str);

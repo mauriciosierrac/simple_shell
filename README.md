@@ -53,7 +53,7 @@ This project is a UNIX command interpreter which provides a command line user in
 
 ---
 
-### Repository Contents :file_foler:
+### Repository Contents :file_folder:
 ```
 * 1-strdup.c
 * 2-str_concat.c

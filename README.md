@@ -118,6 +118,11 @@ total 84
 $
 ```
 ---
+## Flowchar 
+
+![flowchar](https://imgur.com/bJplRl9)
+
+---
 
 ## Authors :sunglasses:
 * **Soren Acevedo** - [SorenAcevedo](https://github.com/SorenAcevedo)

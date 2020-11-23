@@ -120,8 +120,7 @@ $
 ---
 ## Flowchar 
 
-![flowchar](https://imgur.com/bJplRl9)
-
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/TiJY84h" data-context="false" ><a href="//imgur.com/a/TiJY84h"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 ---
 
 ## Authors :sunglasses:

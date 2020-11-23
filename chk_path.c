@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * chk_path - check if the first argument is a file inside de PATH directories
+ * @str: string from getline
+ * Return: A Buffer or Array (Double pointer).
+ */
+
 char **chk_path(char *str)
 {
 	int i;

@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
+ * our_exit - exit
+ * @str: string from getline.
+ * Return: Exit Success.
  */
 
 int our_exit(char *str)
@@ -13,9 +13,9 @@ int our_exit(char *str)
 }
 
 /**
- *
- *
- *
+ * _printenv - print env
+ * @str: string from getline.
+ * Return: 1 on success, 0 if fail.
  */
 
 int _printenv(char *str)
@@ -29,7 +29,7 @@ int _printenv(char *str)
 	{
 		for (j = 0; environ[i][j]; j++)
 		{
-				_putchar(environ[i][j]);
+			_putchar(environ[i][j]);
 		}
 		_putchar(10);
 	}

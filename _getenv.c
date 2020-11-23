@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * _getenv - get a enviroment variable if match.
+ * @name: name of the enviroment variable.
+ * Return: enviroment variable, or Null if fail.
+ */
+
 char *_getenv(char *name)
 {
 	int i, len = 0;

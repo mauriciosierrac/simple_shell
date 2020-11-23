@@ -1,21 +1,22 @@
 #include "holberton.h"
 
 /**
-*
-*
-*/
+ * main - Start our own shell
+ * Return: something.
+ */
 
-int main()
+int main(void)
 {
 	char *c = "$ ", *str = NULL;
 	int command, i;
 	size_t n = 0;
 	struct stat st;
 	char **array;
+
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
-			write (STDOUT_FILENO, c, 2);
+			write(STDOUT_FILENO, c, 2);
 
 		command = getline(&str, &n, stdin);
 
@@ -44,5 +45,5 @@ int main()
 			perror("Error aquí");
 	}
 	free(str);
-	return(0);
+	return (0);
 }

@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * count_delim = count delimiters in str
+ * count_delim - count delimiters in str
  * @str: string
  * @delim: delimiters
  * Return: Number of delimiters
@@ -13,7 +13,7 @@ int count_delim(char *str, char *delim)
 
 	for (i = 0; str[i]; i++)
 	{
-		for(k = 0; delim[k]; k++)
+		for (k = 0; delim[k]; k++)
 		{
 			if (delim[k] == str[i])
 				con++;
@@ -23,7 +23,7 @@ int count_delim(char *str, char *delim)
 }
 
 /**
- * write_buf = create a buffer (double pointer)
+ * write_buf - create a buffer (double pointer)
  * @str: string
  * @delim: delimiters
  * Return: Buffer

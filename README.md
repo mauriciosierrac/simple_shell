@@ -79,7 +79,7 @@ This project is a UNIX command interpreter which provides a command line user in
 
 compile all .c files in the current directory or execute hsh file.
 
-Example: gcc -Wall -Werror -pedantic .c -o hsh.
+Example: gcc -Wall -Werror -pedantic .c -o hsh
 
 Execute: ./hsh
 
@@ -118,6 +118,6 @@ total 84
 $
 ```
 
-## Authors
+## Authors :sunglasses:
 * **Soren Acevedo** - [SorenAcevedo](https://github.com/SorenAcevedo)
 * **Mauricio Sierra Cifuentes** - [mauriciosierrac](https://github.com/\mauriciosierrac)    

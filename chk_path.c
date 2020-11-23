@@ -9,7 +9,7 @@ char **chk_path(char *str)
 
 	array = write_buf(str, " \n");
 
-	pget = _strdup(_getenv(envpath));
+	pget = (cleanpath(_getenv(envpath)));
 
 	if (pget)
 	{

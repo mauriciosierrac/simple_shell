@@ -12,14 +12,18 @@ int main()
 	size_t n = 0;
 	struct stat st;
 	char **array;
-
 	while (1)
 	{
-		write (STDOUT_FILENO, c, 2);
+		if (isatty(STDIN_FILENO))
+			write (STDOUT_FILENO, c, 2);
+
 		command = getline(&str, &n, stdin);
 
 		if (command == EOF)
-			break;
+		{
+			_putchar(10);
+			our_exit(str);
+		}
 
 		if (command != -1)
 		{

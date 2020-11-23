@@ -39,4 +39,5 @@ int count_delim(char *str, char*delim);
 int our_exit(char *);
 int _printenv(char *);
 int _putchar(char c);
+char *cleanpath(char *);
 #endif /*HOLBERTON*/

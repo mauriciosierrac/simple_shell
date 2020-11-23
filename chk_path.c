@@ -8,9 +8,6 @@ char **chk_path(char *str)
 	struct stat st;
 
 	array = write_buf(str, " \n");
-	
-	if (stat(array[0], &st) == 0)
-		return (array);
 
 	pget = _strdup(_getenv(envpath));
 
@@ -19,7 +16,7 @@ char **chk_path(char *str)
 		pbuf = write_buf(pget, ":\n");
 		for (i = 0; pbuf[i]; i++)
 		{
-			concat = str_concat(pbuf[i], str);
+			concat = str_concat(pbuf[i], array[0]);
 
 			if (stat(concat, &st) == 0)
 			{

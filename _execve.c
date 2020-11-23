@@ -1,5 +1,6 @@
 #include "holberton.h"
 
+
 void _execve(char **ag)
 {
 	pid_t child_pid;
@@ -8,7 +9,7 @@ void _execve(char **ag)
 	child_pid = fork();
 
 	if (child_pid == 0)
-		execve(ag[0], ag, NULL);
+		execve(ag[0], ag, environ);
 	if (child_pid > 0)
 		wait(&status);
 	else

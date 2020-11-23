@@ -37,7 +37,7 @@ int main()
 			}
 		}
 		else
-			perror("Error");
+			perror("Error aquí");
 	}
 	free(str);
 	return(0);

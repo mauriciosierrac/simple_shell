@@ -53,6 +53,28 @@ This project is a UNIX command interpreter which provides a command line user in
 
 ---
 
+### Repository Contents :file_foler:
+```
+* 1-strdup.c
+* 2-str_concat.c
+* 2-strlen.c
+* README.md
+* _execve.c
+* _getenv.c
+* _putchar.c
+* builtins.c
+* chk_builtin.c
+* chk_path.c
+* clean_buf.c
+* holberton.h
+* hsh
+* main.c
+* my_strcmp.c
+* write_buf.c
+```
+
+---
+
 ### USE :wrench:
 
 compile all .c files in the current directory or execute hsh file.
@@ -63,19 +85,18 @@ Execute: ./hsh
 
 ```
 $
-
 $ ls
 
 1-strdup.c	README.md	putchar.c	chk_path.c	hsh	write_buf.c
 2-str_concat.c	execve.c	builtins.c	clean_buf.c	main.c
 2-strlen.c	getenv.c	chk_builtin.c	holberton.h	my_strcmp.c
-
+$
 ```
 
 Example 2:
 
 ```
-  simple_shell git:(master)  ./hsh
+simple_shell git:(master)  ./hsh
 $ ls -l
 total 84
 -rw-r--r-- 1 root    root      442 Nov 21 19:40 1-strdup.c

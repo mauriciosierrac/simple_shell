@@ -21,10 +21,7 @@ int main(void)
 		command = getline(&str, &n, stdin);
 
 		if (command == EOF)
-		{
-			_putchar(10);
 			our_exit(str);
-		}
 
 		if (command != -1)
 		{

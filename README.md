@@ -56,12 +56,15 @@ This project is a UNIX command interpreter which provides a command line user in
 compile all .c files in the current directory or execute hsh file.
 
 Example: gcc -Wall -Werror -pedantic .c -o hsh.
-Execute: ./hsh   .
-$                                                                                .
-$ ls                                                                             .
+Execute: ./hsh
+$
+
+$ ls
+
 1-strdup.c      README.md  putchar.c     chk_path.c   hsh          write_buf.c
 2-str_concat.c  execve.c  builtins.c     clean_buf.c  main.c
 2-strlen.c      getenv.c  chk_builtin.c  holberton.h  my_strcmp.c
+
 
 
 ## Authors

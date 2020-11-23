@@ -51,14 +51,14 @@ This project is a UNIX command interpreter which provides a command line user in
 
 ---
 
-### USE
+### USE :wrench:
 
 compile all .c files in the current directory or execute hsh file.
 
 Example: gcc -Wall -Werror -pedantic .c -o hsh.
 
 Execute: ./hsh
-
+```
 $
 
 $ ls
@@ -67,7 +67,7 @@ $ ls
 2-str_concat.c	execve.c	builtins.c	clean_buf.c	main.c
 2-strlen.c	getenv.c	chk_builtin.c	holberton.h	my_strcmp.c
 
-
+```
 
 ## Authors
 * **Soren Acevedo** - [SorenAcevedo](https://github.com/SorenAcevedo)

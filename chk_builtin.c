@@ -1,5 +1,6 @@
 #include "holberton.h"
 
+
 /**
  * chk_builtin = Verify built in functions
  * @word: string to compare
@@ -16,10 +17,12 @@ int chk_builtin(char *word)
 	};
 
 	/* Minus 1 by the '\n'*/
+	if ((my_strcmp(word, "\n", 1)) == 0)
+		return (1);
 
 	while (func_built[i].str != NULL)
 	{
-		if (my_strcmp(word, func_built[i].str, (_strlen(word) - 1)) == 0)
+		if (my_strcmp(word, func_built[i].str, _strlen(word) - 1) == 0)
 		{
 			func_built[i].fun(word);
 			return (1);

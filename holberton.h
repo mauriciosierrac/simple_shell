@@ -11,9 +11,10 @@
 #include <errno.h>
 
 /**
- * struct list_s - lista enlazada individualmente
- * @str: string - (cadena malloc'ed)
- * @next: apunta al siguiente nodo
+ * struct builtin - lista enlazada individualmente
+ * @str: string (cadena malloc'ed)
+ * @fun: apunta al siguiente nodo
+ * Description: List that contain the a string and a function.
  */
 
 typedef struct builtin
@@ -35,7 +36,7 @@ char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
 int chk_builtin(char *);
 int _strlen(char *s);
-int count_delim(char *str, char*delim);
+int count_delim(char *str, char *delim);
 int our_exit(char *);
 int _printenv(char *);
 int _putchar(char c);

@@ -7,15 +7,13 @@
 
 int chk_void(char *env)
 {
-	int j;
+	int j = 0;
 
-	while (env[j] == ' ')
-		j++;
+	if (env[0] == ' ')
+		while (env[j] == ' ')
+			j++;
 	if (env[j] == '\n')
-	{
-		printf("Se metio");
 		return (0);
-	}
 	return (-1);
 }
 

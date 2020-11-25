@@ -17,7 +17,15 @@ void _execve(char **ag, int hist)
 	if (child_pid == 0)
 		execve(ag[0], ag, environ);
 	if (child_pid > 0)
+	{
 		wait(&status);
+
+		if (WIFEXITED(status))
+			state = WEXITSTATUS(status);
+	}
 	else
+	{
 		chk_error(ag[0], hist);
+		exit(state);
+	}
 }

@@ -7,11 +7,10 @@
 
 int main(void)
 {
-	char *c = "$ ", *str = NULL;
+	char *c = "$ ", *str = NULL, **array;
 	int command, i;
 	size_t n = 0;
 	struct stat st;
-	char **array;
 
 	while (1)
 	{
@@ -43,7 +42,8 @@ int main(void)
 			}
 		}
 		else
-			perror("./hsh");
+			if (isatty(STDIN_FILENO))
+				perror("./hsh");
 	}
 	free(str);
 	return (0);

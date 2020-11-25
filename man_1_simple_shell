@@ -1,0 +1,17 @@
+NAME
+    hsh, our own command interpreter (shell).
+SYNOPSIS
+    hsh
+DESCRIPTION
+    hsh is a command interpreter for the system, which resembles dash version. The current version of hsh counts with only two built-in functions.
+    This man page is not intended to be a tutorial or a complete specification of the shell.
+EXAMPLES
+    Some examples of common usage.
+SEE ALSO
+    A list of related commands or functions.
+BUGS
+    List known bugs.
+AUTHOR
+   Specify your contact information.
+COPYRIGHT
+    Specify your copyright information.

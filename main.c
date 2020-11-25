@@ -48,5 +48,5 @@ int main(int ac, char **ag)
 		hist++;
 	}
 	free(str);
-	return (0);
+	return (state);
 }

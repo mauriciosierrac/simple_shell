@@ -44,7 +44,7 @@ int _printenv(char *);
 int _putchar(char c);
 void _puts(char *);
 char *cleanpath(char *);
-
+int chk_void(char *);
 /* Error */
 void chk_error(char *, int);
 void error_permission(char *, int);

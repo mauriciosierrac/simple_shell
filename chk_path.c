@@ -9,13 +9,15 @@
 char **chk_path(char *str)
 {
 	int i;
-	char *envpath = "PATH", *concat, *pget;
+	char *envpath = "PATH=", *concat, *pget;
 	char **pbuf, **array;
 	struct stat st;
 
 	array = write_buf(str, " \n");
+
 	if (array[0][0] == '.' && array[0][1] == '/')
 		return (array);
+
 	pget = (cleanpath(_getenv(envpath)));
 
 	if (pget)

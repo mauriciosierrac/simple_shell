@@ -15,7 +15,7 @@ void _execve(char **ag, int hist)
 	child_pid = fork();
 
 	if (child_pid == 0)
-		execve(ag[0], ag, environ);
+		execve(ag[0], ag, NULL);
 	if (child_pid > 0)
 	{
 		wait(&status);

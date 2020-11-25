@@ -11,6 +11,8 @@ char *cleanpath(char *pathenv)
 	int i, j = 0;
 	char *clnpath;
 
+	if (pathenv == NULL)
+		return (NULL);
 	/* 5 - 1 (PATH= - .) = 4*/
 	clnpath = malloc(sizeof(char) * _strlen(pathenv) - 4);
 

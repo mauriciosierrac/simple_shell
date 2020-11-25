@@ -6,10 +6,13 @@
  * Return: Exit Success.
  */
 
-int our_exit(char *str)
+int our_exit(char *str, int st)
 {
 	free(str);
-	exit(EXIT_FAILURE);
+	if (st == 0)
+		exit(EXIT_SUCCESS);
+	else
+		exit(127);
 }
 
 /**
@@ -18,10 +21,12 @@ int our_exit(char *str)
  * Return: 1 on success, 0 if fail.
  */
 
-int _printenv(char *str)
+int _printenv(char *str, int st)
 {
 	int i, j;
 
+	if (st != 0)
+		st = 0;
 	if (!str)
 		return (0);
 

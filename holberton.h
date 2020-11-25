@@ -20,7 +20,7 @@
 typedef struct builtin
 {
 	char *str;
-	int (*fun)(char *);
+	int (*fun)(char *, int);
 } builtin;
 
 extern char **environ;
@@ -34,11 +34,11 @@ int my_strcmp(char *env, const char *str, int len);
 char *_getenv(char *);
 char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
-int chk_builtin(char *);
+int chk_builtin(char *, int);
 int _strlen(char *s);
 int count_delim(char *str, char *delim);
-int our_exit(char *);
-int _printenv(char *);
+int our_exit(char *, int);
+int _printenv(char *, int);
 int _putchar(char c);
 char *cleanpath(char *);
 #endif /*HOLBERTON*/

@@ -21,7 +21,11 @@ int main(void)
 		command = getline(&str, &n, stdin);
 
 		if (command == EOF)
+		{
+			if (isatty(STDIN_FILENO))
+				_putchar(10);
 			our_exit(str);
+		}
 
 		if (command != -1)
 		{
@@ -32,14 +36,14 @@ int main(void)
 				if (stat(array[0], &st) == 0)
 					_execve(array);
 				else
-					perror("ErrorMain: ");
+					perror("./hsh");
 				for (i = 0; array[i]; i++)
 					free(array[i]);
 				free(array);
 			}
 		}
 		else
-			perror("Error aquí");
+			perror("./hsh");
 	}
 	free(str);
 	return (0);

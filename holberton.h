@@ -50,4 +50,5 @@ void chk_error(char *, int);
 void error_permission(char *, int);
 void error_no_such(char*, int);
 void int_to_str(int);
+int _puterror(char);
 #endif /*HOLBERTON*/

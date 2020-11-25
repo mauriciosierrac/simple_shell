@@ -22,7 +22,7 @@ void int_to_str(int i)
 	}
 	for (; pot > 0; pot /= 10)
 	{
-		_putchar((cpi / (pot)) + 48);
+		_puterror((cpi / (pot)) + 48);
 		cpi %= pot;
 	}
 }

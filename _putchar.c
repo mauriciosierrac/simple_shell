@@ -13,9 +13,21 @@ void _puts(char *str)
 
 	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
+		_puterror(str[i]);
 		i++;
 	}
+}
+
+/**
+ * _puterror - writes the character c to stderr
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _puterror(char c)
+{
+	return (write(2, &c, 1));
 }
 
 /**

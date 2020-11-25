@@ -15,7 +15,13 @@ void _execve(char **ag, int hist)
 	child_pid = fork();
 
 	if (child_pid == 0)
-		execve(ag[0], ag, NULL);
+	{
+		if (execve(ag[0], ag, NULL) == -1)
+		{
+			chk_error(ag[0], hist);
+			exit(state);
+		}
+	}
 	if (child_pid > 0)
 	{
 		wait(&status);
@@ -24,8 +30,5 @@ void _execve(char **ag, int hist)
 			state = WEXITSTATUS(status);
 	}
 	else
-	{
 		chk_error(ag[0], hist);
-		exit(state);
-	}
 }

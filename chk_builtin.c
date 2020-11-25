@@ -16,7 +16,7 @@ int chk_builtin(char *word)
 		{"env", _printenv},
 		{NULL, NULL}
 	};
-	if (chk_void(word) == 0)
+	if (chk_void(word) == 0 || (my_strcmp(word, "\n", 1)) == 0)
 		return (1);
 	while (func_built[i].str != NULL)
 	{

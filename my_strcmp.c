@@ -12,7 +12,7 @@ int chk_void(char *env)
 	if (env[0] == ' ')
 		while (env[j] == ' ')
 			j++;
-	if (env[j] == '\n')
+	if (env[j] == '\n' && env[j + 1] == '\0')
 		return (0);
 	return (-1);
 }

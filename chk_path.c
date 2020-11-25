@@ -14,7 +14,8 @@ char **chk_path(char *str)
 	struct stat st;
 
 	array = write_buf(str, " \n");
-
+	if (array[0][0] == '.' && array[0][1] == '/')
+		return (array);
 	pget = (cleanpath(_getenv(envpath)));
 
 	if (pget)

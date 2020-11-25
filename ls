@@ -1,3 +1,5 @@
-!#bin/bash
+#!/bin/bash
+#
+# Fake ls executable used for tests
 
-echo "Fake ls"
+echo "cisfun"

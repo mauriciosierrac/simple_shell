@@ -44,7 +44,7 @@ int main(int ac, char **ag)
 			}
 		}
 		else
-			chk_error(str, hist);
+			perror("./hsh");
 		hist++;
 	}
 	free(str);

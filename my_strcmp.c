@@ -9,7 +9,7 @@ int chk_void(char *env)
 {
 	int j = 0;
 
-	if (env[0] == ' ')
+	if (env[0] == ' ' || env[0] == '\t')
 		while (env[j] == ' ')
 			j++;
 	if (env[j] == '\n' && env[j + 1] == '\0')
@@ -34,6 +34,5 @@ int my_strcmp(char *env, const char *str, int len)
 		if (env[j] != str[j])
 			return (-1);
 	}
-
 	return (0);
 }

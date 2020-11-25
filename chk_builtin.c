@@ -7,7 +7,7 @@
  * Return: 1 on success, 0 if fail
  */
 
-int chk_builtin(char *word, int st)
+int chk_builtin(char *word)
 {
 	int i = 0;
 
@@ -25,7 +25,7 @@ int chk_builtin(char *word, int st)
 	{
 		if (my_strcmp(word, func_built[i].str, _strlen(word) - 1) == 0)
 		{
-			func_built[i].fun(word, st);
+			func_built[i].fun(word);
 			return (1);
 		}
 		i++;

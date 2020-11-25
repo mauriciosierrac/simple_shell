@@ -5,10 +5,10 @@
  * Return: something.
  */
 
-int main()
+int main(void)
 {
 	char *c = "$ ", *str = NULL, **array;
-	int command, i, status = 0;
+	int command, i;
 	size_t n = 0;
 	struct stat st;
 
@@ -23,16 +23,16 @@ int main()
 		{
 			if (isatty(STDIN_FILENO))
 				_putchar(10);
-			our_exit(str, status);
+			our_exit(str);
 		}
 
 		if (command != -1)
 		{
-			if (chk_builtin(str, status) == 0)
+			if (chk_builtin(str) == 0)
 			{
 				array = chk_path(str);
-				status = stat(array[0], &st);
-				if (status == 0)
+
+				if (stat(array[0], &st) == 0)
 					_execve(array);
 				else
 					perror("./hsh");

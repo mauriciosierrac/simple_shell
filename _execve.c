@@ -3,10 +3,11 @@
 /**
  * _execve - execute.
  * @ag: commands.
+ * @hist: historial of commands.
  * Return: Status
  */
 
-void _execve(char **ag)
+void _execve(char **ag, int hist)
 {
 	pid_t child_pid;
 	int status;
@@ -18,5 +19,5 @@ void _execve(char **ag)
 	if (child_pid > 0)
 		wait(&status);
 	else
-		perror("Error: ");
+		chk_error(ag[0], hist);
 }

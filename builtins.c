@@ -9,7 +9,7 @@
 int our_exit(char *str)
 {
 	free(str);
-	exit(EXIT_SUCCESS);
+	exit(state);
 }
 
 /**

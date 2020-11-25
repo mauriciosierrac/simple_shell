@@ -24,10 +24,12 @@ typedef struct builtin
 } builtin;
 
 extern char **environ;
+char *sh_call;
+int state;
 
 /* PROTOTYPES */
 
-void _execve(char **ag);
+void _execve(char **ag, int);
 char **write_buf(char *, char *);
 char **chk_path(char *);
 int my_strcmp(char *env, const char *str, int len);
@@ -40,5 +42,12 @@ int count_delim(char *str, char *delim);
 int our_exit(char *);
 int _printenv(char *);
 int _putchar(char c);
+void _puts(char *);
 char *cleanpath(char *);
+
+/* Error */
+void chk_error(char *, int);
+void error_permission(char *, int);
+void error_no_such(char*, int);
+void int_to_str(int);
 #endif /*HOLBERTON*/

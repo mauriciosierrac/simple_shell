@@ -13,6 +13,9 @@
     hsh is a command interpreter for the system, which resembles dash version. The current version of hsh counts with only two built-in functions.
     This man page is not intended to be a tutorial or a complete specification of the shell.
 
+.SH EXIT STATUS
+    If a command is not found, errno will be ENOENT, and the return status is 127. If a command is found but is not executable errno will be EACCES  (Permission denied), and the return status is 126. If all it is right, the return status will be EXIT_SUCCES or 0.
+
 .SH EXAMPLES
 [non-interactive mode]
         [command line]

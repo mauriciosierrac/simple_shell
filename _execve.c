@@ -30,5 +30,5 @@ void _execve(char **ag, int hist)
 			state = WEXITSTATUS(status);
 	}
 	else
-		chk_error(ag[0], hist);
+		state = 1;
 }

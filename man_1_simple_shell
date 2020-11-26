@@ -31,24 +31,39 @@
         $
 
 [interactive mode]
+
 	[command line]
+
 	$ls -l
+
 	[outcome]
+
 	total 92
+
 -rw-r--r-- 1 root root   442 Nov 21 19:40 1-strdup.c
 
 -rw-r--r-- 1 root root   591 Nov 22 01:48 2-str_concat.c
 
 -rw-r--r-- 1 root root   156 Nov 22 01:48 2-strlen.c
+
 -rw-r--r-- 1 root root   191 Nov 25 14:38 AUTHORS
+
 -rw-r--r-- 1 root root  2989 Nov 25 19:16 README.md
+
 -rw-r--r-- 1 root root   464 Nov 26 00:27 _execve.c
+
 -rw-r--r-- 1 root root   372 Nov 23 22:34 _getenv.c
+
 -rw-r--r-- 1 root root   632 Nov 25 19:16 _putchar.c
+
 -rw-r--r-- 1 root root   464 Nov 25 16:56 builtins.c
+
 -rw-r--r-- 1 root root   527 Nov 26 00:27 chk_builtin.c
+
 -rw-r--r-- 1 root root   961 Nov 25 22:23 chk_error.c
+
 -rw-r--r-- 1 root root   872 Nov 25 22:23 chk_path.c
+
 -rw-r--r-- 1 root root   535 Nov 25 22:23 cleanpath.c
 
 .SH SEE ALSO

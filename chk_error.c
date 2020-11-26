@@ -58,6 +58,4 @@ void chk_error(char *str, int hist)
 		error_no_such(str, hist);
 	else if (errno == EACCES)
 		error_permission(str, hist);
-	else
-		state = 2;
 }

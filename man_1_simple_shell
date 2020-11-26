@@ -1,18 +1,19 @@
-.TH hsh 1 "2020-11-25" "v1.0"
-NAME
+.TH hsh 1 "2020-11-25" "v1.0" "shell man page"
+
+.SH NAME
     hsh, our own command interpreter (shell).
 
-SYNOPSIS
+.SH SYNOPSIS
     hsh is a command line interpreter or shell that provides a command line user interface.
 
-FORMAT
+.SH FORMAT
     Written in the C programming language.
 
-DESCRIPTION
+.SH DESCRIPTION
     hsh is a command interpreter for the system, which resembles dash version. The current version of hsh counts with only two built-in functions.
     This man page is not intended to be a tutorial or a complete specification of the shell.
 
-EXAMPLES
+.SH EXAMPLES
 [non-interactive mode]
         [command line]
         $ echo "qwerty" | ./hsh
@@ -45,7 +46,7 @@ EXAMPLES
 -rw-r--r-- 1 root root   872 Nov 25 22:23 chk_path.c
 -rw-r--r-- 1 root root   535 Nov 25 22:23 cleanpath.c
 
-SEE ALSO
+.SH SEE ALSO
     Files that make up this project.
 * 1-strdup.c
 * 2-str_concat.c
@@ -68,9 +69,9 @@ SEE ALSO
 * README.md
 * write_buf.c
 
-AUTHORS
+.SH AUTHORS
    Soren Acevedo, Mauricio Sierra
 
-COPYRIGHT
+.SH COPYRIGHT
     This project is open and developed for Holberton School.
 ~                                                                                                     ~                                                               

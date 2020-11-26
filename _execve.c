@@ -30,5 +30,8 @@ void _execve(char **ag, int hist)
 			state = WEXITSTATUS(status);
 	}
 	else
-		state = 1;
+	{
+		perror("Error child");
+		state = EXIT_FAILURE;
+	}
 }

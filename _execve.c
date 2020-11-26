@@ -16,7 +16,7 @@ void _execve(char **ag, int hist)
 
 	if (child_pid == 0)
 	{
-		if (execve(ag[0], ag, NULL) == -1)
+		if (execve(ag[0], ag, environ) == -1)
 		{
 			chk_error(ag[0], hist);
 			exit(state);

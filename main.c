@@ -35,7 +35,7 @@ int main(int ac, char **ag)
 			{
 				array = chk_path(str);
 				if (stat(array[0], &st) == 0)
-					_execve(array, hist);
+					_execve(array, hist, str);
 				else
 					chk_error(str, hist);
 				for (i = 0; array[i]; i++)

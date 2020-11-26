@@ -29,7 +29,7 @@ int state;
 
 /* PROTOTYPES */
 
-void _execve(char **ag, int);
+void _execve(char **ag, int, char *);
 char **write_buf(char *, char *);
 char **chk_path(char *);
 int my_strcmp(char *env, const char *str, int len);

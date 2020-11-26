@@ -36,7 +36,9 @@
 	[outcome]
 	total 92
 -rw-r--r-- 1 root root   442 Nov 21 19:40 1-strdup.c
+
 -rw-r--r-- 1 root root   591 Nov 22 01:48 2-str_concat.c
+
 -rw-r--r-- 1 root root   156 Nov 22 01:48 2-strlen.c
 -rw-r--r-- 1 root root   191 Nov 25 14:38 AUTHORS
 -rw-r--r-- 1 root root  2989 Nov 25 19:16 README.md
@@ -51,25 +53,45 @@
 
 .SH SEE ALSO
     Files that make up this project.
+
 * 1-strdup.c
+
 * 2-str_concat.c
+
 * 2-strlen.c
+
 * AUTHORS
+
 * builtins.c
+
 * chk_builtin.c
+
 * chk_error.c
+
 * chk_path.c
+
 * cleanpath.c
+
 * _execve.c
+
 * _getenv.c
+
 * holberton.h
+
 * hsh
+
 * main.c
+
 * man_1_simple_shell
+
 * my_strcmp.c
+
 * print_int.c
+
 * _putchar.c
+
 * README.md
+
 * write_buf.c
 
 .SH AUTHORS
@@ -77,4 +99,3 @@
 
 .SH COPYRIGHT
     This project is open and developed for Holberton School.
-~                                                                                                     ~                                                               

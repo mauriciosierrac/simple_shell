@@ -17,9 +17,7 @@ char *_getenv(char *name)
 		return (NULL);
 
 	for (i = 0; environ[i]; i++)
-	{
-		if (my_strcmp(environ[i], name, len) == 0)
-			return (environ[i]);
-	}
+		if (my_strcmp(environ[i], name, len) == 0 && (_strlen(environ[i]) > 5))
+				eturn (environ[i]);
 	return (NULL);
 }
